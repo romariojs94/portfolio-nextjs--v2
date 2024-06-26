@@ -6,7 +6,7 @@ import { AnimatePresence, color } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
-export default function Home() {
+export default function Index() {
   const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
 

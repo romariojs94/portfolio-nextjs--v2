@@ -25,7 +25,7 @@ const navItems = [
     href: '/blog',
   },
 ];
-export default function index() {
+export default function Index() {
   const pathname = usePathname();
   const [selectedIndicator, setSelectedIndicator] = useState(pathname);
 

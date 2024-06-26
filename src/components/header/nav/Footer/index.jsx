@@ -1,7 +1,7 @@
 import styles from './style.module.scss';
 import SocialIcons from '@/components/SocialIcons';
 
-export default function index() {
+export default function Index() {
   return (
     <div className={styles.footer}>
       <SocialIcons
