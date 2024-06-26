@@ -3,7 +3,7 @@ import styles from './style.module.scss';
 import { useEffect, useState } from 'react';
 import Nav from './nav';
 import { AnimatePresence, color } from 'framer-motion';
-import { redirect, usePathname } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
 export default function Home() {
