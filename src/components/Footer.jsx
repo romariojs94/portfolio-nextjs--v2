@@ -8,27 +8,27 @@ const Footer = () => {
     },
     {
       title: 'Projetos',
-      href: '/projetos',
+      href: '#projects',
     },
     {
       title: 'Contato',
-      href: '/contato',
+      href: '#contato',
     },
     {
       title: 'Blog',
-      href: '/blog',
+      href: '#blog',
     },
   ];
   return (
-    <footer className="py-5 border-y-[1px] border-y-zinc-500 flex gap-3 flex-wrap justify-between items-center">
+    <footer className="py-5 border-y-[1px] border-y-zinc-500 flex gap-3 flex-wrap justify-between items-center relative z-0">
       <ul className="text-zinc-700">
-        <li className="flex gap-3 md:gap-6">
+        <li className="flex flex-wrap gap-y-1  md:gap-6">
           {navItems.map((data, index) => {
             return (
               <Link
                 key={index}
                 href={data.href}
-                className="p-1 hover:underline"
+                className="p-y-[2px] px-2 hover:underline"
               >
                 {data.title}
               </Link>

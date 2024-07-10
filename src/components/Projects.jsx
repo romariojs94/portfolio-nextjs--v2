@@ -5,17 +5,17 @@ import {
   wordAnimation,
 } from '@/utils/animations';
 import { motion } from 'framer-motion';
-import Footer from '../Footer';
 const Projects = () => {
   return (
     <>
       <motion.section
-        className="py-10 sm:py-12 md:py-16 lg:py-20"
+        id="projects"
+        className="py-10 sm:py-12 md:py-16 lg:py-20 w-full"
         initial="initial"
         animate="animate"
       >
-        <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center">
-          <AnimatedWords title="Projetos recentes" />{' '}
+        <h2 className="text-3xl sm:text-4xl md:text-5xl leading-[1] py-2 lg:text-6xl font-bold text-center">
+          <AnimatedWords title="Projetos recentes" />
         </h2>
         <motion.p
           className="text-center max-w-[55ch] mx-auto -mt-[10px]"
@@ -26,11 +26,19 @@ const Projects = () => {
         </motion.p>
 
         <div className="flex flex-col lg:flex-row w-full gap-10 pt-20">
-          <div className="lg:w-3/5">
-            <img className='w-full ' src="https://via.placeholder.com/900x400" alt="Projeto 1" />
+          <div className="w-full lg:w-1/2">
+            <img
+              className="w-full"
+              src="/images/quant-capital.jpg"
+              alt="Quant Capital"
+              title='Quant Capital'
+              height={720}
+              width={960}
+
+            />
           </div>
-          <div className="w-full lg:w-2/5">
-            <h3 className="text-5xl font-bold">
+          <div className="w-full lg:w-1/2">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl leading-[1] py-2 lg:text-5xl font-bold">
               <AnimatedWords title="Projeto número 1" />
             </h3>
             <motion.p
@@ -40,10 +48,10 @@ const Projects = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
               suscipit, urna nec aliquam.
             </motion.p>
-            <div className="flex items-center gap-2 mt-3 sm:mt-4 md:mt-6 lg:mt-8">
+            <div className="flex flex-wrap items-center gap-2 mt-3 sm:mt-4 md:mt-6 lg:mt-8">
               <a
                 href="/"
-                className="flex w-fit items-center justify-center gap-3 bg-gradient-to-br from-zinc-800 to-zinc-950 px-8 py-3 text-sm font-semibold tracking-tight text-slate-100 transition ease-in hover:shadow-2xl hover:shadow-indigo-500/40 active:scale-95"
+                className="flex w-full sm:w-fit items-center justify-center gap-3 bg-gradient-to-br from-zinc-800 to-zinc-950 px-8 py-3 text-sm font-semibold tracking-tight text-slate-100 transition ease-in hover:shadow-2xl hover:shadow-indigo-500/40 active:scale-95"
               >
                 Visitar
                 <svg
@@ -77,7 +85,7 @@ const Projects = () => {
               </a>
               <a
                 href=""
-                className="flex w-fit cursor-pointer items-center justify-center gap-3 bg-zinc-800 px-8 py-3 text-sm font-semibold tracking-tight text-slate-100 transition ease-in hover:bg-zinc-950 active:scale-95"
+                className="flex w-full sm:w-fit cursor-pointer items-center justify-center gap-3 bg-zinc-800 px-8 py-3 text-sm font-semibold tracking-tight text-slate-100 transition ease-in hover:bg-zinc-950 active:scale-95"
               >
                 Código fonte
                 <svg
@@ -107,7 +115,6 @@ const Projects = () => {
           </div>
         </div>
       </motion.section>
-      <Footer />
     </>
   );
 };

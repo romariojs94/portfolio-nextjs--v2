@@ -5,7 +5,6 @@ import { usePathname } from 'next/navigation';
 import { menuSlide } from '../anim';
 import Link from './Link';
 import Curve from './Curve';
-import Footer from './Footer';
 
 const navItems = [
   {
@@ -14,21 +13,20 @@ const navItems = [
   },
   {
     title: 'Projetos',
-    href: '/projetos',
+    href: '#projects',
   },
   {
     title: 'Contato',
-    href: '/contato',
+    href: '#contato',
   },
   {
     title: 'Blog',
-    href: '/blog',
+    href: '#blog',
   },
 ];
-export default function Index() {
+export default function Index({ setIsActive }) {
   const pathname = usePathname();
   const [selectedIndicator, setSelectedIndicator] = useState(pathname);
-
   return (
     <motion.div
       variants={menuSlide}
@@ -41,6 +39,7 @@ export default function Index() {
         <div
           onMouseLeave={() => {
             setSelectedIndicator(pathname);
+            setIsActive(false);
           }}
           className={styles.nav}
         >
@@ -58,7 +57,6 @@ export default function Index() {
             );
           })}
         </div>
-        <Footer />
       </div>
       <Curve />
     </motion.div>

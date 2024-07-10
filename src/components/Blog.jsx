@@ -8,8 +8,7 @@ import {
   wordAnimation,
 } from '@/utils/animations';
 import { motion } from 'framer-motion';
-import Footer from '@/components/Footer';
-export default function blog() {
+export default function Blog() {
   const posts = [
     {
       slug: 'hello-world',
@@ -23,15 +22,13 @@ export default function blog() {
   ];
   return (
     <>
-      <motion.div
+      <motion.main
         initial="initial"
         animate="animate"
-        className="container mx-auto"
+        className="py-20"
+        id="blog"
       >
-        <motion.div
-          variants={riseWithFade}
-          className="mx-auto max-w-screen-2xl px-4 py-10 sm:py-12 md:py-32"
-        >
+        <motion.div variants={riseWithFade}>
           {/* <!-- text - start --> */}
           <h2 className="text-center font-bold text-gray-800 text-3xl sm:text-4xl md:text-6xl mb-8 md:mb-16">
             <AnimatedWords title="Blog" />
@@ -41,7 +38,7 @@ export default function blog() {
             {/* <!-- article - start --> */}
             {posts.map((post, index) => (
               <Link
-              key={index}
+                key={index}
                 href={`/blog/${post.slug}`}
                 className="group relative flex h-48 flex-col overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-64 xl:h-96"
               >
@@ -71,8 +68,7 @@ export default function blog() {
             {/* <!-- article - end --> */}
           </div>
         </motion.div>
-      </motion.div>
-      <Footer />
+      </motion.main>
     </>
   );
 }

@@ -2,9 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 2;
     position: relative;
-    height: 80px;
+    height: 90px;
+    gap: 50px;
     border-bottom: 1px solid rgb(113 113 122);
     .button{
         position: absolute;
@@ -17,9 +17,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: 2;
     }
-
-
     .burger{
         &::after, &::before{
             content: "";
@@ -31,18 +30,15 @@
             position: relative;
             transition: transform 0.3s;
         }
-
         &::after{
             top: -5px;
         }
-
         &::before{
             top: 5px;
         }
     }
 
     .burgerActive{
-
         &::after{
             transform: rotate(45deg);
             top: -1px;
@@ -54,7 +50,6 @@
             top: 0px;
             background-color: #fff;
         }
-        
     }
 }
 

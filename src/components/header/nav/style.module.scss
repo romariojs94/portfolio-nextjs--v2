@@ -1,16 +1,15 @@
 .menu{
-    z-index: 1;
     height: 100vh;
-    background-color: #111;
+    background-color: #000;
     position: fixed;
     right: 0;
     top: 0;
     color: #f7f7f7;
-
+    z-index: 1;
     .body{
         box-sizing: border-box;
         height: 100%;
-        padding: 40px 80px;
+        padding: 100px 70px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -36,5 +35,12 @@
             }
             
         }
+    }
+}
+
+@media (max-width: 768px){
+    .menu{
+        width: 100vw;
+        height: 100vh;
     }
 }

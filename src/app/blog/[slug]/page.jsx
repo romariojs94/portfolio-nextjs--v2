@@ -1,8 +1,7 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 // app/blog/[slug]/page.js
 export default function PostPage({ params }) {
-  console.log(params);
   const { slug } = params;
 
   // Simulação de dados de posts
@@ -30,7 +29,9 @@ export default function PostPage({ params }) {
   return (
     <>
       <div className="max-w-[800px] mx-auto my-24 p-12 border-2 border-t-gray-300">
-        <Link href="/blog" className="font-normal text-lg">← Voltar</Link>
+        <Link href="/#blog" className="font-normal text-lg">
+          ← Voltar
+        </Link>
         <h1 className="text-3xl py-3 font-bold">{post.title}</h1>
         <p>{post.content}</p>
       </div>

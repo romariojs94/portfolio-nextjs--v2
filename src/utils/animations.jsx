@@ -8,7 +8,7 @@ export const riseWithFade = {
     opacity: 1,
     transition: {
       ease: [0.6, 0.01, 0.05, 0.95],
-      duration: 0.7,
+      duration: 0.3,
     },
   },
 };
@@ -25,12 +25,14 @@ export const staggerChildren = {
 export const wordAnimation = {
   initial: {
     y: 100,
+    opacity: 0,
   },
   animate: {
+    opacity: 1,
     y: 0,
     transition: {
       ease: [0.6, 0.01, 0.05, 0.95],
-      duration: 1,
+      duration: 0.7,
     },
   },
 };
